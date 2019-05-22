@@ -1,15 +1,16 @@
 <?php
-class Math{
-    public static function arr($arr){
-        $len = '';
-        for ($i=0; $i < $arr["$len"]; $i++) { 
-
-            if ($i) {
-                
-            }
+function odd($arr){
+    $newArr = [];
+    $result = array_count_values($arr);
+    foreach ($result as $key => $value) {
+        if ($value == 1) {
+            $newArr[] = $key;
         }
-        return ($i);
     }
+    return $newArr;
 }
+$arr = [2,4,3,6,3,2,5,5];
+$new = odd($arr);
+print_r($new);
 
 ?>
